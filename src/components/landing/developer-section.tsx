@@ -15,11 +15,12 @@ export function DeveloperSection() {
   return (
     <Section id="developers" width="wide">
       <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-        <div className="lg:sticky lg:top-24 lg:self-start">
+        {/* min-w-0 keeps the YAML line from widening the whole grid on small screens. */}
+        <div className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <SectionHeader
             eyebrow="For engineers"
             title="Built for people who want to know why the system works."
-            description="A working answer you cannot explain is not a working system. RAGLab keeps every retrieval step, every score and every model call addressable."
+            description="A working answer you cannot explain is not a working system. RAGLabs keeps every retrieval step, every score and every model call addressable."
           />
 
           <ul className="mt-8 flex flex-col gap-3.5">
@@ -34,7 +35,7 @@ export function DeveloperSection() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex min-w-0 flex-col gap-4">
           <CodeBlock
             code={developerSnippet}
             title="raglab.yaml"

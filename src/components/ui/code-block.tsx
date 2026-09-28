@@ -8,7 +8,7 @@ import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { cn } from "@/lib/utils";
 
 /**
- * Monospaced code surface. Line numbers are opt-in because most RAGLab code
+ * Monospaced code surface. Line numbers are opt-in because most RAGLabs code
  * blocks are short snippets or prompts where numbering adds noise.
  */
 export function CodeBlock({

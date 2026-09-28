@@ -25,7 +25,7 @@ export function RAGConcept() {
 
           <p className="mt-6 max-w-md text-sm leading-relaxed text-fg-muted">
             Each step below adds one idea to the step above it. Some buy recall, some
-            buy faithfulness, and every one of them costs latency. RAGLab exists to
+            buy faithfulness, and every one of them costs latency. RAGLabs exists to
             measure which is worth paying for on your data.
           </p>
 

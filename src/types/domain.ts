@@ -1,5 +1,5 @@
 /**
- * RAGLab domain model.
+ * RAGLabs domain model.
  *
  * These types describe the shapes the Phase 2+ backend is expected to return.
  * Phase 1 components only ever read them from the mock-data layer, so swapping

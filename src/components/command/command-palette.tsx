@@ -22,7 +22,7 @@ import { useUIStore } from "@/lib/store/ui";
  * Global command palette (⌘K / Ctrl+K).
  *
  * Built on cmdk, which owns the combobox semantics, arrow navigation and
- * filtering; this component adds RAGLab's grouping, iconography and shortcuts.
+ * filtering; this component adds RAGLabs' grouping, iconography and shortcuts.
  */
 export function CommandPalette() {
   const open = useUIStore((state) => state.commandPaletteOpen);
@@ -45,7 +45,7 @@ export function CommandPalette() {
         >
           <DialogPrimitive.Title className="sr-only">Command palette</DialogPrimitive.Title>
           <DialogPrimitive.Description className="sr-only">
-            Search for a page, or run a RAGLab command.
+            Search for a page, or run a RAGLabs command.
           </DialogPrimitive.Description>
 
           <Command key={instanceKey} loop className="flex flex-col">
@@ -112,7 +112,9 @@ export function CommandPalette() {
                   <Kbd>Esc</Kbd> close
                 </span>
               </span>
-              <span className="technical hidden sm:inline">RAGLab</span>
+              <span className="technical hidden sm:inline">
+                <span className="text-accent">RAG</span>Labs
+              </span>
             </div>
           </Command>
         </DialogPrimitive.Content>

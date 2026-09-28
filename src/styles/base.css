@@ -1,5 +1,5 @@
 /*
- * Base layer + shared utilities for RAGLab.
+ * Base layer + shared utilities for RAGLabs.
  * Consumes only tokens declared in tokens.css.
  */
 
@@ -70,7 +70,7 @@
     color: var(--fg-muted);
   }
 
-  /* Remove the native number-input spinners; RAGLab uses explicit steppers. */
+  /* Remove the native number-input spinners; RAGLabs uses explicit steppers. */
   input[type="number"]::-webkit-outer-spin-button,
   input[type="number"]::-webkit-inner-spin-button {
     appearance: none;

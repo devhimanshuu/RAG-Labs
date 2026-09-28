@@ -30,12 +30,12 @@ export function PipelineShowcase() {
         <div className="relative overflow-hidden rounded-xl border border-line bg-surface-inset">
           <div className="grid-backdrop pointer-events-none absolute inset-0 opacity-40" aria-hidden />
 
-          <div className="relative flex items-center gap-3 border-b border-line-subtle px-4 py-2.5">
-            <span className="technical text-2xs uppercase tracking-[0.16em] text-fg-muted">
+          <div className="relative flex flex-wrap items-center gap-x-3 gap-y-1 border-b border-line-subtle px-4 py-2.5">
+            <span className="technical whitespace-nowrap text-2xs uppercase tracking-[0.16em] text-fg-muted">
               Canvas
             </span>
-            <span className="technical text-2xs text-accent">multi-query · hybrid-rerank</span>
-            <span className="technical ml-auto text-2xs text-fg-disabled">
+            <span className="technical truncate text-2xs text-accent">multi-query · hybrid-rerank</span>
+            <span className="technical ml-auto whitespace-nowrap text-2xs text-fg-disabled">
               {showcasePipeline.length} stages
             </span>
           </div>

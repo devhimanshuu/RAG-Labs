@@ -24,7 +24,7 @@ const DESCRIPTION =
   "Experiment, inspect, compare and benchmark modern Retrieval-Augmented Generation systems. Swap retrievers, rerankers and reasoning strategies, then measure quality, latency and cost on the same dataset.";
 
 export const metadata: Metadata = {
-  // `absolute` bypasses the root layout's `%s · RAGLab` template: the landing
+  // `absolute` bypasses the root layout's `%s · RAGLabs` template: the landing
   // page is the brand surface, not a sub-page.
   title: { absolute: TITLE },
   description: DESCRIPTION,

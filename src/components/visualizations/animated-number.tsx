@@ -55,31 +55,35 @@ export function AnimatedNumber({
   const [display, setDisplay] = React.useState(value);
 
   React.useEffect(() => {
-    if (!inView) return;
-    if (prefersReducedMotion) {
-      setDisplay(value);
-      return;
-    }
+    if (!inView || prefersReducedMotion) return;
 
     let frame = 0;
     let start = 0;
 
     const tick = (now: number) => {
-      if (start === 0) start = now;
+      // Reset on the first frame rather than in the effect body, so the effect
+      // never writes state synchronously.
+      if (start === 0) {
+        start = now;
+        setDisplay(0);
+      }
       const elapsed = now - start - delayMs;
       const progress = elapsed <= 0 ? 0 : Math.min(1, elapsed / durationMs);
       setDisplay(value * easeOutCubic(progress));
       if (progress < 1) frame = requestAnimationFrame(tick);
     };
 
-    setDisplay(0);
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
   }, [delayMs, durationMs, inView, prefersReducedMotion, value]);
 
+  // Reduced motion reads the target value straight from props, so the effect
+  // never has to push state synchronously.
+  const shown = prefersReducedMotion ? value : display;
+
   return (
     <span ref={ref} className={className}>
-      {formatValue(display, format, digits)}
+      {formatValue(shown, format, digits)}
     </span>
   );
 }

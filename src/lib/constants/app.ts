@@ -1,6 +1,6 @@
 import type { RagStrategy } from "@/types";
 
-export const APP_NAME = "RAGLab";
+export const APP_NAME = "RAGLabs";
 export const APP_TAGLINE = "Retrieval experimentation lab";
 export const APP_VERSION = "0.1.0";
 

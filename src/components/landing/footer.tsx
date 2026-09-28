@@ -53,7 +53,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-line-subtle pt-6 sm:flex-row sm:items-center sm:justify-between">
           <p className="technical text-2xs text-fg-disabled">
-            © 2026 RAGLab — built for people who want to know why the system works.
+            © 2026 RAGLabs — built for people who want to know why the system works.
           </p>
           <p className="technical text-2xs text-fg-disabled">
             All metrics on this page are illustrative sample data.

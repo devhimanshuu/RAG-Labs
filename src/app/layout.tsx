@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: `%s · ${APP_NAME}`,
   },
   description:
-    "RAGLab is an experimentation platform for building, inspecting, comparing and benchmarking retrieval-augmented generation techniques.",
+    "RAGLabs is an experimentation platform for building, inspecting, comparing and benchmarking retrieval-augmented generation techniques.",
   applicationName: APP_NAME,
 };
 

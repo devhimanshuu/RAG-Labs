@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 
 /**
- * RAGLab mark: two retrieval nodes feeding a single generation node. Drawn with
+ * RAGLabs mark: two retrieval nodes feeding a single generation node. Drawn with
  * `currentColor` so it can sit on any surface without a second asset.
  */
 export function LogoMark({ className }: { className?: string }) {
@@ -49,7 +49,9 @@ export function Logo({ className, showText = true }: { className?: string; showT
     <span className={cn("flex items-center gap-2", className)}>
       <LogoMark />
       {showText ? (
-        <span className="text-sm font-semibold tracking-tight text-fg">RAGLab</span>
+        <span className="text-sm font-semibold tracking-tight text-fg">
+          <span className="text-accent">RAG</span>Labs
+        </span>
       ) : null}
     </span>
   );

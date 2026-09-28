@@ -14,7 +14,7 @@ export default function NotFound() {
       <EmptyState
         icon={Compass}
         title="This route does not exist"
-        description="The page you requested is not part of the RAGLab workspace. It may have moved, or it belongs to a later phase."
+        description="The page you requested is not part of the RAGLabs workspace. It may have moved, or it belongs to a later phase."
         actions={
           <Button variant="primary" asChild>
             <Link href="/dashboard">Back to dashboard</Link>

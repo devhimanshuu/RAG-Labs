@@ -76,7 +76,7 @@ export function RAGArena() {
       <SectionHeader
         eyebrow="RAG arena"
         title="Same question. Different RAG."
-        description="Four architectures, one dataset, the same hundred questions. RAGLab runs them back to back and reports quality, faithfulness and latency in a single comparable table."
+        description="Four architectures, one dataset, the same hundred questions. RAGLabs runs them back to back and reports quality, faithfulness and latency in a single comparable table."
       />
 
       <div className="mt-10 overflow-hidden rounded-xl border border-line bg-surface">

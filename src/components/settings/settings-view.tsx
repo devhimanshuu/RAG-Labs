@@ -43,7 +43,7 @@ const THEME_OPTIONS: Array<{
   {
     value: "dark",
     label: "Dark",
-    description: "The flagship RAGLab experience, tuned for long sessions.",
+    description: "The flagship RAGLabs experience, tuned for long sessions.",
     icon: Moon,
   },
   {
@@ -624,7 +624,7 @@ export function SettingsView() {
               </FieldRow>
               <FieldRow
                 label="Product updates"
-                description="Release notes for new RAGLab capabilities."
+                description="Release notes for new RAGLabs capabilities."
               >
                 <Switch
                   checked={notifications.productUpdates}

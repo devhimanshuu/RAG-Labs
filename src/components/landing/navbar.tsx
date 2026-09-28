@@ -50,7 +50,7 @@ export function Navbar() {
         <Link
           href="/"
           className="flex shrink-0 items-center rounded-sm focus-ring"
-          aria-label="RAGLab home"
+          aria-label="RAGLabs home"
         >
           <Logo />
         </Link>

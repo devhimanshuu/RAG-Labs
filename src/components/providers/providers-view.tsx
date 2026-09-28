@@ -162,7 +162,7 @@ export function ProvidersView() {
                     onClick={() =>
                       toast.info(
                         `${provider.name} docs`,
-                        "Documentation links are external and open outside RAGLab.",
+                        "Documentation links are external and open outside RAGLabs.",
                       )
                     }
                   >

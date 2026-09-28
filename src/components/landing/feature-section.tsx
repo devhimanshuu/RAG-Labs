@@ -181,7 +181,7 @@ function EvaluationVisual() {
         { label: "precision", value: 0.93 },
       ].map((metric, index) => (
         <div key={metric.label} className="flex items-center gap-2.5">
-          <Caption className="w-16 shrink-0">{metric.label}</Caption>
+          <Caption className="w-20 shrink-0">{metric.label}</Caption>
           <AnimatedBar value={metric.value} tone="accent" delayMs={index * 60} />
           <span className="technical w-9 shrink-0 text-right text-[10px] text-fg-secondary">
             {(metric.value * 100).toFixed(0)}%
@@ -278,11 +278,11 @@ const CELL_SPANS = [
 
 export function FeatureSection() {
   return (
-    <Section width="wide">
+    <Section id="capabilities" width="wide">
       <SectionHeader
         eyebrow="Capabilities"
         title="Everything between the query and the answer."
-        description="RAGLab covers the whole pipeline, not just the prompt. Each capability below is a stage you can swap, configure and measure independently."
+        description="RAGLabs covers the whole pipeline, not just the prompt. Each capability below is a stage you can swap, configure and measure independently."
       />
 
       <div className="mt-10 grid gap-px overflow-hidden rounded-xl border border-line bg-line-subtle sm:grid-cols-2 lg:grid-cols-6">

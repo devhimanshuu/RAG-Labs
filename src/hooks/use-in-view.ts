@@ -19,17 +19,17 @@ export function useInView<T extends HTMLElement = HTMLDivElement>({
   once?: boolean;
 } = {}) {
   const ref = React.useRef<T | null>(null);
-  const [inView, setInView] = React.useState(false);
+  // Without observer support, treat the content as visible instead of hiding it
+  // forever — resolved at init so the effect never has to push state.
+  const [inView, setInView] = React.useState(
+    () => typeof IntersectionObserver === "undefined",
+  );
 
   React.useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
-    // Without observer support, show the content rather than hiding it forever.
-    if (typeof IntersectionObserver === "undefined") {
-      setInView(true);
-      return;
-    }
+    if (typeof IntersectionObserver === "undefined") return;
 
     const observer = new IntersectionObserver(
       (entries) => {

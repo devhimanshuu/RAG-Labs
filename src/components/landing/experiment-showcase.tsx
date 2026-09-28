@@ -40,7 +40,7 @@ const lastScore = history[history.length - 1];
 /** Experiment detail, rendered as the run artefact it would be in the app. */
 export function ExperimentShowcase() {
   return (
-    <Section width="wide">
+    <Section id="experiments" width="wide">
       <SectionHeader
         eyebrow="Experiments"
         title="Stop guessing. Run experiments."

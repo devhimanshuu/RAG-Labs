@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/lib/utils";
 
 /**
- * Empty state. Every list surface in RAGLab renders one of these rather than a
+ * Empty state. Every list surface in RAGLabs renders one of these rather than a
  * blank region, so an empty workspace still reads as a finished product.
  */
 export function EmptyState({

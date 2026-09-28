@@ -130,7 +130,7 @@ export function TechniqueExplorer() {
       <SectionHeader
         eyebrow="Technique explorer"
         title="Pick a technique. See exactly what it changes."
-        description="Retrieval, query and reasoning techniques are independent variables. RAGLab renders the flow each one implies so you can reason about the architecture before you spend a token on it."
+        description="Retrieval, query and reasoning techniques are independent variables. RAGLabs renders the flow each one implies so you can reason about the architecture before you spend a token on it."
       />
 
       <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-start lg:gap-10">

@@ -103,7 +103,7 @@ function GroupStage({
         </button>
       </div>
 
-      <div className="grid grid-cols-2 gap-2">
+      <div className="grid grid-cols-1 gap-2 min-[440px]:grid-cols-2">
         {heroPipelineGroup.nodeIds.map((id) => {
           const child = getHeroNode(id);
           if (!child) return null;

@@ -12,7 +12,7 @@ import { evaluationBars, evaluationSystemMetrics } from "@/lib/mock-data/landing
  */
 export function EvaluationShowcase() {
   return (
-    <Section width="wide">
+    <Section id="evaluation" width="wide">
       <SectionHeader
         eyebrow="Evaluation"
         title="Measure what actually matters."
@@ -91,7 +91,7 @@ export function EvaluationShowcase() {
             </p>
             <p className="text-xs leading-relaxed text-fg-secondary">
               A technique that raises recall by nine points while tripling latency is
-              not automatically an improvement. RAGLab reports quality and cost in the
+              not automatically an improvement. RAGLabs reports quality and cost in the
               same view so the trade stays a decision you make on evidence.
             </p>
           </div>
