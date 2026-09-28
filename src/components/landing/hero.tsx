@@ -33,8 +33,8 @@ export function Hero() {
       </div>
 
       <div className="relative mx-auto w-full max-w-7xl px-5 pt-28 pb-16 sm:px-8 sm:pt-36 sm:pb-24">
-        <div className="flex max-w-3xl flex-col items-start gap-5">
-          <Eyebrow>The laboratory for RAG engineering</Eyebrow>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center">
+          <Eyebrow className="justify-center">The laboratory for RAG engineering</Eyebrow>
 
           <h1 className="text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-fg sm:text-5xl lg:text-6xl">
             Build RAG systems you can actually understand.

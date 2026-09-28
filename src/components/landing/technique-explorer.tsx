@@ -133,7 +133,7 @@ export function TechniqueExplorer() {
         description="Retrieval, query and reasoning techniques are independent variables. RAGLab renders the flow each one implies so you can reason about the architecture before you spend a token on it."
       />
 
-      <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:gap-10">
+      <div className="mt-10 grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.05fr)] lg:items-start lg:gap-10">
         <div className="flex flex-col gap-5 rounded-xl border border-line bg-surface p-5">
           {techniqueCategories.map((entry) => (
             <CategoryGroup
