@@ -1,0 +1,185 @@
+/*
+ * Base layer + shared utilities for RAGLab.
+ * Consumes only tokens declared in tokens.css.
+ */
+
+@layer base {
+  * {
+    border-color: var(--line);
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  body {
+    background-color: var(--canvas);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: var(--text-base);
+    line-height: var(--text-base--line-height);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--accent-glow);
+    color: var(--fg);
+  }
+
+  /* Webkit scrollbars are styled globally so nested panels stay consistent. */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--line-strong);
+    border: 3px solid transparent;
+    background-clip: content-box;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--fg-disabled);
+    background-clip: content-box;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Radix focus scopes should not paint a ring of their own. */
+  [data-radix-focus-guard] {
+    outline: none;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--fg-muted);
+  }
+
+  /* Remove the native number-input spinners; RAGLab uses explicit steppers. */
+  input[type="number"]::-webkit-outer-spin-button,
+  input[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
+}
+
+/* Visible focus ring that must survive on any surface. */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+}
+
+@utility focus-ring-inset {
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: -2px;
+  }
+}
+
+/*
+ * Technical / numeric typography. Used for IDs, latencies, scores, token
+ * counts and any other value a developer scans in a column.
+ */
+@utility technical {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "zero" 1;
+  letter-spacing: -0.01em;
+}
+
+/* Tabular figures for dense numeric tables without switching to mono. */
+@utility tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+/* Subtle graph-paper backdrop for canvas-like surfaces (pipelines, playground). */
+@utility grid-backdrop {
+  background-image: linear-gradient(to right, var(--line-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--line-subtle) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Dotted backdrop, quieter than the grid. */
+@utility dot-backdrop {
+  background-image: radial-gradient(var(--line) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Animated connector used by pipeline edges and trace lines. */
+@utility flow-line {
+  stroke-dasharray: 4 4;
+  animation: flow-dash 1s linear infinite;
+}
+
+/*
+ * Marketing surfaces. The landing page is the only place allowed to use
+ * atmospheric gradients; the application UI stays flat.
+ */
+
+/* Soft accent bloom, anchored at the top of a section. */
+@utility glow-accent {
+  background-image: radial-gradient(
+    55% 55% at 50% 0%,
+    var(--accent-glow) 0%,
+    transparent 72%
+  );
+}
+
+/* Centred bloom for CTA blocks. */
+@utility glow-accent-center {
+  background-image: radial-gradient(
+    45% 70% at 50% 50%,
+    var(--accent-glow) 0%,
+    transparent 70%
+  );
+}
+
+/* 1px separator that fades out at both ends. */
+@utility hairline {
+  height: 1px;
+  background-image: linear-gradient(to right, transparent, var(--line), transparent);
+}
+
+/* Fades a section's content into the canvas at its top edge. */
+@utility fade-top {
+  mask-image: linear-gradient(to bottom, transparent, black 12%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
